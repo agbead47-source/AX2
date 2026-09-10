@@ -9,7 +9,7 @@ load_dotenv()
 EXCHANGE_API_KEY = os.getenv("EXCHANGE_API_KEY")
 
 # 페이지 설정 (넓은 화면 적용)
-st.set_page_config(page_title="러블리 환율 계산기", page_icon="💖", layout="wide")
+st.set_page_config(page_title="환율 계산기", page_icon="💖", layout="wide")
 
 # ==========================================
 # 🎨 전체 화면 핑크 테마 & 굵은 글꼴 CSS 주입
