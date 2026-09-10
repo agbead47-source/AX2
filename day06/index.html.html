@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도쿄 문구 투어 & 맛집 완벽 가이드</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #fdfbf7;
+            color: #333;
+        }
+        h1, h2, h3, .title-font {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-[#f4ecd8] py-16 px-4 text-center border-b-[3px] border-[#e2d5b8]">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#5c4d3c] mb-4 leading-tight">
+                <i class="fa-solid fa-pen-nib text-[#8c7a6b] mr-2"></i> 도쿄 문구 & 맛집 투어
+            </h1>
+            <p class="text-[#7a6a58] text-lg md:text-xl">
+                기록을 사랑하는 당신을 위한 완벽한 하루 코스.<br>
+                도쿄의 대표 문구점 4곳과 실패 없는 주변 맛집을 소개합니다.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto py-12 px-4 space-y-12">
+
+        <!-- Course 1: Ginza -->
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 card-hover">
+            <div class="flex items-center mb-6">
+                <span class="bg-red-700 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">코스 01</span>
+                <h2 class="text-2xl font-bold text-gray-800 title-font">긴자 (Ginza) : 클래식과 규모의 압도</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Stationery -->
+                <div class="bg-orange-50 rounded-xl p-5 border border-orange-100">
+                    <h3 class="text-lg font-bold text-orange-900 mb-2" data-place-id="ChIJKQAKAOSLGGARwGhpOXWgfYo">
+                        <i class="fa-solid fa-store mr-1"></i> 긴자 이토야 (Itoya)
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 h-16">
+                        100년이 넘는 역사를 자랑하는 도쿄 문구점의 상징입니다. 12층짜리 건물 전체가 문구류로 꽉 차 있으며, 고급 만년필부터 아기자기한 엽서까지 모든 것이 있습니다.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500 mb-3">
+                        <i class="fa-regular fa-clock w-5 text-center"></i>
+                        <span>10:00 ~ 20:00 (일요일 19:00 마감)</span>
+                    </div>
+                    <a href="https://maps.google.com/?cid=9979308774657714368" target="_blank" class="inline-block bg-orange-600 text-white text-sm font-medium px-4 py-2 rounded shadow hover:bg-orange-700 transition">구글 맵 보기 &rarr;</a>
+                </div>
+
+                <!-- Restaurant -->
+                <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
+                    <h3 class="text-lg font-bold text-blue-900 mb-2" data-place-id="ChIJu3eG8uiLGGAR14kVvD_YrHI">
+                        <i class="fa-solid fa-utensils mr-1"></i> 큐베이 긴자 (Kyubey)
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 h-16">
+                        이토야에서 쇼핑 후 나에게 주는 최고의 보상! 일본 최상급 하이엔드 스시를 맛볼 수 있는 곳입니다. (예산이 넉넉한 날 추천하며, 예약 필수입니다.)
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500 mb-3">
+                        <i class="fa-solid fa-star w-5 text-center text-yellow-500"></i>
+                        <span>구글 평점 4.4</span>
+                    </div>
+                    <a href="https://maps.google.com/?cid=8263217184568084951" target="_blank" class="inline-block bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded shadow hover:bg-blue-700 transition">구글 맵 보기 &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course 2: Kuramae -->
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 card-hover">
+            <div class="flex items-center mb-6">
+                <span class="bg-emerald-700 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">코스 02</span>
+                <h2 class="text-2xl font-bold text-gray-800 title-font">구라마에 (Kuramae) : 나만의 커스텀 노트 만들기</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Stationery -->
+                <div class="bg-orange-50 rounded-xl p-5 border border-orange-100">
+                    <h3 class="text-lg font-bold text-orange-900 mb-2" data-place-id="ChIJYzGkb7eOGGARNSIHlHC_mbY">
+                        <i class="fa-solid fa-book mr-1"></i> 카키모리 (Kakimori)
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 h-16">
+                        종이, 표지, 링, 부자재를 직접 골라 세상에 단 하나뿐인 나만의 노트를 만들 수 있는 곳입니다. 만년필 잉크 바(Bar)도 매우 유명합니다.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500 mb-3">
+                        <i class="fa-regular fa-clock w-5 text-center"></i>
+                        <span>11:00 ~ 18:00 (월요일 휴무)</span>
+                    </div>
+                    <a href="https://maps.google.com/?cid=13157758276580352565" target="_blank" class="inline-block bg-orange-600 text-white text-sm font-medium px-4 py-2 rounded shadow hover:bg-orange-700 transition">구글 맵 보기 &rarr;</a>
+                </div>
+
+                <!-- Restaurant -->
+                <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
+                    <h3 class="text-lg font-bold text-blue-900 mb-2" data-place-id="ChIJ65nX2guPGGARct4XWSDc2dg">
+                        <i class="fa-solid fa-utensils mr-1"></i> 녹는 햄버그 후쿠요시
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 h-16">
+                        카키모리에서 도보 5분 거리! 이름 그대로 입에서 사르르 녹는 육즙 가득한 철판 햄버그 스테이크를 즐길 수 있는 핫플레이스입니다.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500 mb-3">
+                        <i class="fa-solid fa-star w-5 text-center text-yellow-500"></i>
+                        <span>구글 평점 4.8</span>
+                    </div>
+                    <a href="https://maps.google.com/?cid=15625762413630447218" target="_blank" class="inline-block bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded shadow hover:bg-blue-700 transition">구글 맵 보기 &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course 3: Nakameguro -->
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 card-hover">
+            <div class="flex items-center mb-6">
+                <span class="bg-indigo-700 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">코스 03</span>
+                <h2 class="text-2xl font-bold text-gray-800 title-font">나카메구로 (Nakameguro) : 감성 넘치는 다꾸의 성지</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Stationery -->
+                <div class="bg-orange-50 rounded-xl p-5 border border-orange-100">
+                    <h3 class="text-lg font-bold text-orange-900 mb-2" data-place-id="ChIJAQABzE6LGGARgnqhPmipo_Q">
+                        <i class="fa-solid fa-plane-departure mr-1"></i> 트래블러스 팩토리
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 h-16">
+                        다꾸(다이어리 꾸미기)족들의 성지. 뒷골목에 숨겨진 감성적인 매장으로, 트래블러스 노트 본품과 한정판 스탬프, 참(Charm) 등을 구매할 수 있습니다.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500 mb-3">
+                        <i class="fa-regular fa-clock w-5 text-center"></i>
+                        <span>12:00 ~ 20:00 (화요일 휴무)</span>
+                    </div>
+                    <a href="https://maps.google.com/?cid=17628119631650716290" target="_blank" class="inline-block bg-orange-600 text-white text-sm font-medium px-4 py-2 rounded shadow hover:bg-orange-700 transition">구글 맵 보기 &rarr;</a>
+                </div>
+
+                <!-- Restaurant -->
+                <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
+                    <h3 class="text-lg font-bold text-blue-900 mb-2" data-place-id="ChIJwQVrwkiLGGARaenTX3ljkVM">
+                        <i class="fa-solid fa-utensils mr-1"></i> 아후리(AFURI) 나카메구로
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 h-16">
+                        산뜻하고 깔끔한 국물이 일품인 '유자 시오 라멘' 맛집입니다. 트래블러스 팩토리 쇼핑 후 역 근처에서 가볍고 맛있게 한 끼 하기 완벽합니다.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500 mb-3">
+                        <i class="fa-solid fa-star w-5 text-center text-yellow-500"></i>
+                        <span>구글 평점 4.4</span>
+                    </div>
+                    <a href="https://maps.google.com/?cid=6021703549720979817" target="_blank" class="inline-block bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded shadow hover:bg-blue-700 transition">구글 맵 보기 &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course 4: Shinjuku -->
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 card-hover">
+            <div class="flex items-center mb-6">
+                <span class="bg-purple-700 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">코스 04</span>
+                <h2 class="text-2xl font-bold text-gray-800 title-font">신주쿠 (Shinjuku) : 가성비와 실용성의 끝판왕</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Stationery -->
+                <div class="bg-orange-50 rounded-xl p-5 border border-orange-100">
+                    <h3 class="text-lg font-bold text-orange-900 mb-2" data-place-id="ChIJFWyKVtuMGGARA-Jcl8RKyAQ">
+                        <i class="fa-solid fa-palette mr-1"></i> 세카이도 신주쿠 본점
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 h-16">
+                        미술 용품과 실용 문구류를 정가보다 15~20% 저렴하게 살 수 있는 거대한 화방 겸 문구점입니다. 스티커, 마스킹테이프, 펜을 쓸어 담기 좋습니다.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500 mb-3">
+                        <i class="fa-regular fa-clock w-5 text-center"></i>
+                        <span>09:30 ~ 20:00 (연중무휴)</span>
+                    </div>
+                    <a href="https://maps.google.com/?cid=344607579707335171" target="_blank" class="inline-block bg-orange-600 text-white text-sm font-medium px-4 py-2 rounded shadow hover:bg-orange-700 transition">구글 맵 보기 &rarr;</a>
+                </div>
+
+                <!-- Restaurant -->
+                <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
+                    <h3 class="text-lg font-bold text-blue-900 mb-2" data-place-id="ChIJAQCl79GMGGARZheneHqgIUs">
+                        <i class="fa-solid fa-utensils mr-1"></i> 우동 신 (Udon Shin)
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 h-16">
+                        도쿄 제일의 우동 맛집 중 하나. 갓 뽑아낸 쫄깃한 수타면과 바삭한 튀김이 환상적입니다. 대기줄이 길 수 있으니 쇼핑 전후 웨이팅 시간을 잘 계산하세요!
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500 mb-3">
+                        <i class="fa-solid fa-star w-5 text-center text-yellow-500"></i>
+                        <span>구글 평점 3.9 (엄청난 리뷰 수 보유)</span>
+                    </div>
+                    <a href="https://maps.google.com/?cid=5413784674946717542" target="_blank" class="inline-block bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded shadow hover:bg-blue-700 transition">구글 맵 보기 &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8 text-center mt-8">
+        <p class="mb-2">행복하고 기록이 가득한 도쿄 문구 여행 되시길 바랍니다! ✈️</p>
+        <p class="text-sm text-gray-500">Created by AX 바이브코딩</p>
+    </footer>
+
+</body>
+</html>
