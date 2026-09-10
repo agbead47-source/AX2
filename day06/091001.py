@@ -4,55 +4,45 @@ import feedparser
 import streamlit as st
 from dotenv import load_dotenv
 
-# 1. 환경 변수 로드 (.env 파일에서 API 키 가져오기)
+# 환경 변수 로드
 load_dotenv()  
 EXCHANGE_API_KEY = os.getenv("EXCHANGE_API_KEY")
 
-# 페이지 설정 (넓은 화면 적용)
-st.set_page_config(page_title="환율 계산기", page_icon="💖", layout="wide")
+# 페이지 설정
+st.set_page_config(page_title="러블리 환율 계산기", page_icon="💖", layout="wide")
 
-# ==========================================
 # 🎨 전체 화면 핑크 테마 & 굵은 글꼴 CSS 주입
-# ==========================================
 st.markdown("""
 <style>
-    /* 구글 웹 폰트 가져오기 (주아체, 고운돋움체) */
     @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap');
 
-    /* 💡 전체 기본 글꼴 설정 (고운돋움 - 굵고 선명하게!) */
     html, body, [class*="st-"], p, span, div {
         font-family: 'Gowun Dodum', sans-serif !important;
-        font-weight: 700 !important; /* 글씨를 아주 굵게 */
-        color: #5C3A41 !important; /* 또렷한 진한 브라운/핑크빛 */
+        font-weight: 700 !important;
+        color: #5C3A41 !important;
     }
 
-    /* 💡 제목류(h1, h2, h3) 글꼴 설정 (주아체 - 더 선명하고 둥글게) */
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Jua', sans-serif !important;
-        font-weight: 800 !important; /* 제목은 더더욱 굵게! */
+        font-weight: 800 !important;
     }
     
-    /* 사이드바 글자 크기 살짝 키우기 */
     [data-testid="stSidebar"] * {
         font-size: 16px; 
     }
 
-    /* 메인 화면 배경색 (연한 핑크) */
     .stApp {
         background-color: #FFF0F5;
     }
     
-    /* 사이드바 배경색 (딸기우유 핑크) */
     [data-testid="stSidebar"] {
         background-color: #FFE4E1;
     }
     
-    /* 상단 헤더 투명화 처리 */
     [data-testid="stHeader"] {
         background-color: transparent;
     }
     
-    /* 버튼 스타일 커스텀 (핑크 젤리 느낌 + 굵은 글씨) */
     div.stButton > button:first-child {
         background-color: #FFB6C1;
         color: #FFFFFF !important;
@@ -78,9 +68,6 @@ if not EXCHANGE_API_KEY:
     st.error("앗! 💦 환율 API 키가 설정되지 않았어요. .env 파일에 EXCHANGE_API_KEY를 추가해 주세요 🥺")
     st.stop()
 
-# ==========================================
-# 🔄 API 데이터 가져오기 (캐싱 적용)
-# ==========================================
 @st.cache_data(ttl=3600)
 def fetch_exchange_rates(api_key):
     url = f"https://v6.exchangerate-api.com/v6/{api_key}/latest/USD"
@@ -98,9 +85,6 @@ if data:
     rates = data.get("conversion_rates", {})
     krw_rate = rates.get("KRW", 1.0)
     
-    # ==========================================
-    # 🎀 1. 사이드바: 우리나라(KRW) 기준 비교 환율
-    # ==========================================
     st.sidebar.markdown("<h2 style='color: #FF1493;'>🌍 주요 통화 환율 💖</h2>", unsafe_allow_html=True)
     st.sidebar.caption("우리나라 원화(KRW) 기준 실시간 환율이에요 ✨")
     st.sidebar.divider()
@@ -120,18 +104,12 @@ if data:
     st.sidebar.divider()
     st.sidebar.caption(f"📅 업데이트: {data.get('time_last_update_utc', '')[:16]} ⏰")
 
-    # ==========================================
-    # 💱 2. 메인 화면: 레이아웃 분할
-    # ==========================================
-    st.markdown("<h1 style='text-align: center; color: #FF1493; text-shadow: 2px 2px 4px #FFC0CB;'>💖환율 대시보드 💖</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: #FF1493; text-shadow: 2px 2px 4px #FFC0CB;'>💖 러블리 핑크 환율 대시보드 💖</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; color: #FF69B4; font-size: 20px; font-weight: bold;'>실시간 맞춤 환율 계산과 최신 환율 변동 뉴스를 한눈에 확인하세요 🌸</p>", unsafe_allow_html=True)
     st.divider()
     
     left_col, right_col = st.columns([1.5, 1], gap="large")
     
-    # ------------------------------------------
-    # 🌷 좌측 영역: 환율 계산기
-    # ------------------------------------------
     with left_col:
         st.markdown("<h3 style='color: #DB7093;'>🧚‍♀️ 나만의 맞춤 환율 계산기</h3>", unsafe_allow_html=True)
         
@@ -158,7 +136,6 @@ if data:
                 conversion_result = (amount / rate_from) * rate_to
                 unit_rate = rate_to / rate_from
                 
-                # 결과창
                 st.markdown(f"""
                 <div style="background-color: #FFFFFF; padding: 25px; border-radius: 20px; text-align: center; border: 3px dashed #FF69B4; box-shadow: 0 4px 10px rgba(255,105,180,0.2); margin-top: 15px;">
                     <h2 style="color: #FF1493; margin: 0; font-size: 36px; font-weight: 800; font-family: 'Jua', sans-serif;">
@@ -171,9 +148,6 @@ if data:
                 </div>
                 """, unsafe_allow_html=True)
 
-    # ------------------------------------------
-    # 📰 우측 영역: 대한민국 환율 관련 최신 기사
-    # ------------------------------------------
     with right_col:
         st.markdown("<h3 style='color: #DB7093;'>🗞️ 실시간 국내 환율 뉴스</h3>", unsafe_allow_html=True)
         st.caption("구글 뉴스 기준 실시간 '환율' 관련 주요 기사예요 💌")
