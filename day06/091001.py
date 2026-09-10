@@ -104,7 +104,7 @@ if data:
     st.sidebar.divider()
     st.sidebar.caption(f"📅 업데이트: {data.get('time_last_update_utc', '')[:16]} ⏰")
 
-    st.markdown("<h1 style='text-align: center; color: #FF1493; text-shadow: 2px 2px 4px #FFC0CB;'>💖 러블리 핑크 환율 대시보드 💖</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: #FF1493; text-shadow: 2px 2px 4px #FFC0CB;'>💖 환율 대시보드 💖</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; color: #FF69B4; font-size: 20px; font-weight: bold;'>실시간 맞춤 환율 계산과 최신 환율 변동 뉴스를 한눈에 확인하세요 🌸</p>", unsafe_allow_html=True)
     st.divider()
     
