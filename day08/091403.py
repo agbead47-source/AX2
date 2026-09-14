@@ -14,6 +14,7 @@ from urllib.parse import urlencode, urlsplit
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from string import Template
+from babel.numbers import get_currency_name, get_territory_currencies
 
 import requests
 import streamlit as st
